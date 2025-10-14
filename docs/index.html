@@ -1,4 +1,4 @@
-<!-- v1.0 2025-10-14T07:50:23.886Z -->
+<!-- v1.0 2025-10-14T20:30:40.004Z -->
 
 <!DOCTYPE html>
 <html lang="en" data-env="github" class="preload">
@@ -8,20 +8,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Cruor Games • TTRPG</title>
+  <title>Red Potion Studio</title>
 
-  <meta name="description"
-    content="" />
+  <meta name="description" content="" />
 
-  <meta name="author" content="Alonso de Luna" />
+  <meta name="author" content="Danilo Aversa" />
 
   <!-- Favicon (opzionale) -->
   <link rel="icon" href="/assets/icons/logo/favicon.ico" type="image/ico" />
 
   <!-- Open Graph per link preview -->
   <meta property="og:title" content="Cruor Games • TTRPG" />
-  <meta property="og:description"
-    content="" />
+  <meta property="og:description" content="" />
   <meta property="og:image" content="assets/preview.png" />
   <meta property="og:url" content="https://www.cruorgames.com" />
   <meta property="og:type" content="website" />
@@ -31,8 +29,6 @@
 
   <!-- IE Compatibility -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <script type="module" src="/scripts/config.js"></script>
 
   <link rel="stylesheet" href="/style/style.css">
 
@@ -48,12 +44,250 @@
   -->
 
   <!-- MAIN CONTENT ───────────────────────────────────────────── -->
+  <!-- 1 • Logo + Presentation -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content side">
+      <img src="./assets/icons/logo/logo.svg" alt="Red Potion logo" class="hero-icon" />
+      <div>
+        <img src="./assets/icons/logo/logotype.svg" alt="Red Potion Studio" class="hero-logo" />
+        <h2 class="hero-subtitle-2">Creative services for the tabletop RPG industry</h2>
+        <h3 class="hero-subtitle">Graphic Design • Narrative Design • VTT Modules • Translation</h2>
+      </div>
+    </div>
+  </section>
 
-   <!-- ─────────────── MAIN CONTENT ─────────────── -->
-            <!-- 1 • Logo + Presentation-->
-            <section>
-              
-                <p></p>
-            </section>
+  <!-- 2 • Mission -->
+  <section class="mission-section">
+    <div class="mission-content">
+      <h2 class="section-title">Our Mission</h2>
+      <p class="mission-text">
+        At Red Potion Studio, we bring tabletop worlds to life through visual design, digital adaptation, and
+        storytelling.
+      </p>
+      <p class="mission-text">
+        We specialize in crafting immersive manuals, Roll20/Fantasy Grounds/Foundry modules, and promotional media that
+        capture the essence of your game and connect it to players worldwide.
+      </p>
+      <p class="mission-text">
+        Our mission is to empower creators and publishers in the TTRPG industry with beautiful, functional, and
+        narrative-driven assets—so your stories don’t just play, they shine.
+      </p>
+    </div>
+  </section>
+
+  <!-- 3 • Services -->
+  <section class="services-section">
+    <div class="services-container">
+      <div class="service-card">
+        <img src="./assets/icons/layout.png" alt="Graphic & Layout Design" class="service-icon" />
+        <h3 class="service-title">Graphic & Layout</h3>
+        <p class="service-text">We create manuals, supplements, and digital books that are both beautiful and easy to
+          navigate. Every layout is crafted to enhance readability and immerse players in the world you’ve built.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="./assets/icons/programming.png" alt="Virtual Tabletop Conversion" class="service-icon" />
+        <h3 class="service-title">VTT Conversion</h3>
+        <p class="service-text">We adapt your adventures and resources for Roll20, Fantasy Grounds Unity, and
+          FoundryVTT, ensuring maps, tokens, and modules are fully interactive, functional, and ready for smooth
+          gameplay online.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="./assets/icons/creative-writing.png" alt="Narrative & Game Design Support" class="service-icon" />
+        <h3 class="service-title">Content Design</h3>
+        <p class="service-text">From rich lore and compelling questlines to balanced mechanics and content writing, we
+          help you develop narratives and game systems that captivate players and bring your tabletop worlds to life.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <img src="./assets/icons/content-strategy.png" alt="Marketing Assets" class="service-icon" />
+        <h3 class="service-title">Marketing Assets</h3>
+        <p class="service-text">We produce animations, banners, social graphics, and other promotional materials that
+          reflect your game’s identity, helping you engage your audience and showcase your content effectively.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 • Contacts -->
+
+  <section id="contact" class="contact-section">
+    <h2 class="section-title reveal">Work With Us</h2>
+    <p class="contact-intro reveal">
+      Have a project, a game, or an idea you want to bring to life?
+      <br>Let's create something extraordinary together.
+    </p>
+
+    <form class="contact-form reveal" action="https://formspree.io/f/yourformid" method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject" required>
+          <option value="" disabled selected>Select an option...</option>
+          <option value="general">General Inquiry</option>
+          <option value="layout">Graphic & Layout Design</option>
+          <option value="vtt">Virtual Tabletop Conversion</option>
+          <option value="design">Narrative & Game Design Support</option>
+          <option value="marketing">Marketing Assets</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group hidden" id="subSubjectContainer">
+        <label for="subSubject">Details</label>
+        <select id="subSubject" name="subSubject"></select>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="button">Send Message</button>
+    </form>
+  </section>
+
+  <!-- 5 • Portfolio -->
+  <section class="portfolio-section">
+    <h2 class="section-title">Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item" data-title="Burn the Witch" data-client="Personal" data-year="2025"
+        data-type="Narrative, Game, and Graphic Design"
+        data-notes="<em>Burn the Witch</em> was a personal project — a complete adventure written for <strong>Dungeons & Dragons 5E</strong>. <br>For <em>Burn the Witch</em>, Red Potion Studio handled every aspect of production: from the narrative and adventure design to the mechanical development and overall game structure. <br>The final product was fully laid out in the visual style of D&D’s 2024 edition, enriched with custom decorative elements and bespoke graphic details."
+        data-images="../assets/portfolio/btw/p1.jpg, ../assets/portfolio/btw/p2.jpg, ../assets/portfolio/btw/p3.jpg, ../assets/portfolio/btw/p4.jpg, ../assets/portfolio/btw/p5.jpg">
+        <img src="../assets/portfolio/btw.jpg" alt="Burn the Witch cover">
+      </div>
+
+      <div class="portfolio-item" data-title="Gristlecracker's Hags & Grimoire"
+        data-client="Laws of Chaos (D. Chivers, M. Bertini)" data-year="2025" data-type="Graphic Design, Layout"
+        data-notes="" data-images="">
+        <img src="../assets/portfolio/ghg.jpg" alt="Gristlecracker.s Hags & Grimoire cover">
+      </div>
+
+      <div class="portfolio-item" data-title="Graveborne" data-client="Personal" data-year="2025"
+        data-type="Narrative, Game, and Graphic Design" data-notes=""
+        data-images="">
+        <img src="../assets/portfolio/gb.jpg" alt="Graveborne cover">
+      </div>
+
+      <div class="portfolio-item" data-title="The Complete Hag Roll20" data-client="Laws of Chaos (D. Chivers, M. Bertini)" data-year="2025"
+        data-type="VTT Module (Roll20 Compendium)" data-notes=""
+        data-images="">
+        <img src="../assets/portfolio/tch.jpg" alt="The Complete Hag cover">
+      </div>
+
+      <div class="portfolio-item" data-title="Big Bundle of Everything Roll20" data-client="M. Bertini" data-year="2025"
+        data-type="VTT Module (Roll20 Compendium)" data-notes=""
+        data-images="">
+        <img src="../assets/portfolio/bboe.jpg" alt="Big Bundle of Everything cover">
+      </div>
+
+      <!-- More items -->
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="portfolio-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+
+      <div class="modal-details">
+        <h3 id="modal-title"></h3>
+        <p><strong>Client <span class="dot-divider">•</span></strong> <span id="modal-client"></span></p>
+        <p><strong>Year <span class="dot-divider">•</span></strong> <span id="modal-year"></span></p>
+        <p><strong>Type <span class="dot-divider">•</span></strong> <span id="modal-type"></span></p>
+        <p><strong>Work <span class="dot-divider">•</span></strong> <span id="modal-notes"></span></p>
+      </div>
+
+      <!-- Gallery -->
+      <div class="modal-gallery">
+        <img id="main-image" src="" alt="Product image">
+        <div class="gallery-thumbnails">
+          <!-- Miniatures generated with JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Partnerships -->
+<section class="partnership-section dmsguild">
+  <div class="partnership-content">
+    <div class="partnership-text">
+      <h2>DMsGuild Partnership</h2>
+      <p class="intro">
+        As officially <strong>Vetted Graphic Designers</strong> for the Dungeon Masters Guild, 
+        we specialize in producing publication-ready manuals that meet <strong>Print on Demand</strong> standards.
+      </p>
+
+      <p>
+        We offer professional layout and graphic design tailored for OneBookShelf’s publishing requirements,
+        ensuring that your books are visually striking and fully compliant with DMsGuild print specifications.
+      </p>
+
+      <ul class="partnership-benefits">
+        <li>• <strong>Print-on-Demand</strong> layout compliant with DMsGuild guidelines</li>
+        <li>• Production manuals following the D&D layout, both 2014 and 2024 editions</li>
+        <li>• Flexible payment options — including <strong>royalty share agreements</strong> when suitable</li>
+      </ul>
+
+      <p class="closing">
+        If you’re preparing a release for the <strong>DMsGuild</strong>, we can help you turn your manuscript into a polished, print-ready* product.
+      </p>
+      <p class="note"><small>*Print-ready products must comply with the requirements detailed <a href="https://help.dmsguild.com/hc/en-us/articles/12776855666839-Print-on-Demand-Requirements-Guidelines" target="_blank">here</a>, but with us it is also possible to produce a fully digital-only manual.</small></p>
+    </div>
+
+    <div class="partnership-logo">
+      <img src="https://d1vzi28wh99zvq.cloudfront.net/images/site_resources/DMsGuildProductLogoLarge.png" alt="DMsGuild Certified Designer Badge">
+    </div>
+  </div>
+</section>
+
+<section class="partnership-section roll20">
+  <div class="partnership-content">
+    <div class="partnership-text">
+      <h2>Roll20 Partnership</h2>
+      <p class="intro">
+        We develop <strong>Roll20 Addons and Compendium modules</strong> designed to make your content playable and visually cohesive online.
+      </p>
+
+      <p>
+        From map setup and journal linking to token automation and compendium entries,
+        we transform your book’s content into a fully integrated virtual experience for GMs and players alike.
+      </p>
+
+      <ul class="partnership-benefits">
+        <li>• <strong>Compendium</strong>-ready formatting and data structure</li>
+        <li>• Custom graphic design and layout for Handouts and Compendium pages</li>
+        <li>• Token, Tables, and Handout integration</li>
+        <li>• Module packaging ready for <strong>Roll20 Marketplace</strong></li>
+      </ul>
+
+      <p class="closing">
+        Ideal for publishers expanding to digital play or creators releasing their first VTT module.
+      </p>
+    </div>
+
+    <div class="partnership-logo">
+      <img src="https://d1vzi28wh99zvq.cloudfront.net/images/site_resources/Roll20-VTT-Product_Label-K.png" alt="Roll20 Developer Badge">
+    </div>
+  </div>
+</section>
+
+
+
+  <script src="../scripts/modal.js"></script>
+  <script src="../scripts/contact.js"></script>
+  <script src="../scripts/effects.js"></script>
 </body>
+
 </html>
