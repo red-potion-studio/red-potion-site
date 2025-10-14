@@ -1,4 +1,4 @@
-/*v1.1 2025-10-14T07:37:24.814Z*/
+/*v1.1 2025-10-14T07:52:45.108Z*/
 
 /*=============================================
 =            IMPORTS & VARIABLES              =
@@ -60,7 +60,7 @@ body {
     background: linear-gradient(to bottom,
            var(--background-light-1),
            var(--background-light-3)),
-           url("/assets/textures/diamonds-1.png") repeat;
+           url('/docs/assets/textures/diamonds-1.png') repeat;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -145,7 +145,7 @@ p {
     background: linear-gradient(to right,
             rgba(var(--background-dark-1-rgb), 1),
             rgba(var(--background-dark-2-rgb), 1)),
-        url('/assets/textures/concrete-1.png');
+        url('/docs/assets/textures/concrete-1.png');
 }
 
 .section-columns {
