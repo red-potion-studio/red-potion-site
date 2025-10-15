@@ -1,4 +1,4 @@
-/*v1.1 2025-10-15T17:46:17.537Z*/
+/*v1.1 2025-10-15T19:40:52.918Z*/
 
 /*=============================================
 =            IMPORTS & VARIABLES              =
@@ -310,7 +310,7 @@ p {
   background: linear-gradient(45deg, var(--red-1), var(--red-2));
   z-index: 0;
   animation: lightGlow 8s ease-in-out infinite alternate;
-  opacity: 0.95;
+  opacity: 1;
   border-radius: .4rem;
 }
 
