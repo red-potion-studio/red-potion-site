@@ -6,7 +6,7 @@ const modalClient = document.getElementById('modal-client');
 const modalYear = document.getElementById('modal-year');
 const modalType = document.getElementById('modal-type');
 const modalNotes = document.getElementById('modal-notes');
-const modalClose = document.querySelector('.modal-close');
+const modalClose = modal.querySelector('.modal-close');
 
 const mainImage = document.getElementById('main-image');
 const thumbnailsContainer = modal.querySelector('.gallery-thumbnails');
@@ -19,10 +19,9 @@ function openModal(item) {
   modalNotes.innerHTML = item.dataset.notes;
 
   // Immagini della galleria
-  const images = item.dataset.images.split(','); // es: "img1.jpg,img2.jpg,img3.jpg"
-  mainImage.src = images[0];
+  const images = item.dataset.images.split(',');
+  mainImage.src = images[0].trim();
 
-  // Pulizia miniature precedenti
   thumbnailsContainer.innerHTML = '';
   images.forEach((src, index) => {
     const thumb = document.createElement('img');
@@ -30,7 +29,6 @@ function openModal(item) {
     if (index === 0) thumb.classList.add('active');
     thumb.addEventListener('click', () => {
       mainImage.src = src.trim();
-      // Aggiorna stato active
       thumbnailsContainer.querySelectorAll('img').forEach(img => img.classList.remove('active'));
       thumb.classList.add('active');
     });
@@ -38,10 +36,12 @@ function openModal(item) {
   });
 
   modal.classList.add('show');
+  document.body.style.overflow = 'hidden'; // blocca scroll body
 }
 
 function closeModal() {
   modal.classList.remove('show');
+  document.body.style.overflow = ''; // ripristina scroll body
 }
 
 portfolioItems.forEach(item => {

@@ -1,3 +1,19 @@
+const contactModal = document.getElementById('contact-modal');
+const openContact = document.getElementById('open-contact-modal');
+const closeContact = contactModal.querySelector('.modal-close');
+
+openContact.addEventListener('click', () => {
+  contactModal.classList.add('show');
+});
+
+closeContact.addEventListener('click', () => {
+  contactModal.classList.remove('show');
+});
+
+contactModal.addEventListener('click', e => {
+  if (e.target === contactModal) contactModal.classList.remove('show');
+});
+
 document.querySelector('.contact-form')?.addEventListener('submit', e => {
   e.preventDefault();
   alert('Thank you! Your message has been sent.');
