@@ -1,4 +1,4 @@
-/*v1.1 2025-10-15T17:37:12.324Z*/
+/*v1.1 2025-10-15T17:45:08.135Z*/
 
 /*=============================================
 =            IMPORTS & VARIABLES              =
@@ -161,6 +161,8 @@ p {
   background: rgba(var(--background-light-4-rgb), 1);
   text-align: center;
   color: var(--text-black, #000);
+  border-radius: .5rem;
+  margin-top: .5rem;
 }
 
 .mission-content {
@@ -187,6 +189,8 @@ p {
   background: var(--background-light-1);
   text-align: center;
   color: var(--text-black, #000);
+  border-radius: .5rem;
+  margin-top: .5rem;
 }
 
 .services-container {
@@ -259,6 +263,8 @@ p {
   background: var(--background-light-1);
   text-align: center;
   color: var(--text-black);
+  border-radius: .5rem;
+  margin-top: .5rem;
 }
 
 .portfolio-title {
@@ -487,6 +493,8 @@ p {
   background: var(--background-light-4);
   text-align: center;
   color: var(--text-black);
+  border-radius: .5rem;
+  margin-top: .5rem;
 }
 
 .faq-intro {
@@ -595,6 +603,8 @@ p {
   padding: 2rem;
   background: var(--background-light-4);
   color: var(--text-black);
+  border-radius: .5rem;
+  margin-top: .5rem;
 }
 
 .contact-intro {
@@ -744,6 +754,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: .5rem;
+  margin-top: .5rem;
 }
 
 .partnership-content {
@@ -821,6 +833,8 @@ p {
   padding: 4rem 2rem 2rem;
   color: #ccc;
   font-size: 0.95rem;
+  border-radius: .5rem;
+  margin-top: .5rem;
 }
 
 .footer-content {
