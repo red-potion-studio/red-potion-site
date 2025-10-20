@@ -6,6 +6,7 @@ const modalClient = document.getElementById('modal-client');
 const modalYear = document.getElementById('modal-year');
 const modalType = document.getElementById('modal-type');
 const modalNotes = document.getElementById('modal-notes');
+const modalChallenges = document.getElementById('modal-challenges');
 const modalClose = modal.querySelector('.modal-close');
 
 const mainImage = document.getElementById('main-image');
@@ -17,6 +18,7 @@ function openModal(item) {
   modalYear.textContent = item.dataset.year;
   modalType.textContent = item.dataset.type;
   modalNotes.innerHTML = item.dataset.notes;
+  modalChallenges.innerHTML = item.dataset.challenges;
 
   // Immagini della galleria
   const images = item.dataset.images.split(',');

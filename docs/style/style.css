@@ -1,4 +1,4 @@
-/*v1.1 2025-10-15T19:40:52.918Z*/
+/*v1.1 2025-10-20T16:16:36.122Z*/
 
 /*=============================================
 =            IMPORTS & VARIABLES              =
@@ -316,7 +316,7 @@ p {
 
 .portfolio-item-wrapper::before {
   content: '';
-  position: absolute;
+  position: relative;
   top: -8px;
   left: -8px;
   right: -8px;
@@ -399,13 +399,18 @@ p {
 
 .modal-details p {
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 130px 1fr;
   align-items: start;
   margin: 0;
   padding: 0;
   line-height: 1.7;
 }
 
+#modal-notes p {
+  display: block;
+  margin: 0 0 .5rem 0;
+  line-height: 1.5;
+}
 
 .modal-details strong {
   display: flex;
