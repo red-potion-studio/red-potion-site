@@ -1,4 +1,4 @@
-/*v1.1 2025-10-20T17:33:19.163Z*/
+/*v1.1 2025-10-20T19:40:13.683Z*/
 
 /*=============================================
 =            IMPORTS & VARIABLES              =
@@ -106,7 +106,7 @@ p {
   font-family: var(--font-main);
   font-size: 1rem;
   font-weight: 600;
-  margin: 1rem 0 .5rem;
+  margin: .25rem 0 .5rem;
   color: var(--red-2, #c53368);
   line-height: 1;
 }
@@ -347,6 +347,7 @@ p {
 
 .portfolio-item-wrapper:hover img {
   transform: scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3))
 }
 
 /* Modal overlay */
@@ -362,7 +363,6 @@ p {
   height: 100%;
   backdrop-filter: blur(5px);
   background-color: rgba(0, 0, 0, 0.6);
-
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -389,6 +389,28 @@ p {
   transform: scale(0.95);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  max-height: 80vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--red-2) transparent;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: var(--red-2);
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background-color: var(--red-2);
 }
 
 .modal.show .modal-content {
@@ -419,7 +441,8 @@ p {
   line-height: 1.7;
 }
 
-#modal-notes p {
+#modal-notes p,
+#modal-challenges p {
   display: block;
   margin: 0 0 .5rem 0;
   line-height: 1.5;
@@ -435,7 +458,9 @@ p {
 }
 
 #modal-notes em,
-#modal-notes strong {
+#modal-notes strong,
+#modal-challenges em,
+#modal-challenges strong {
   display: inline;
 }
 
@@ -789,6 +814,7 @@ p {
   color: var(--text-black, #000);
   font-family: var(--font-main);
   line-height: 1.6;
+  font-weight: 350;
 }
 
 .partnership-text h2 {
@@ -824,10 +850,6 @@ p {
   height: auto;
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
   transition: transform 0.3s ease;
-}
-
-.partnership-logo img:hover {
-  transform: scale(1.05);
 }
 
 .partnership-text .closing {
@@ -968,6 +990,10 @@ p {
   animation: glow 1s ease-in-out infinite alternate;
   margin-top: 0.3em;
   border-radius: 2px;
+}
+
+h3#modal-title::after {
+  width: 100%;
 }
 
 .gradient-text.no-line::after {
@@ -1159,6 +1185,10 @@ p {
     padding: 1.5rem 1rem;
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .modal-description-title {
+    margin: 1rem 0 .5rem;
   }
 
   #contact-modal .modal-content {
