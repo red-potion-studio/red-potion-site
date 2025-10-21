@@ -1,4 +1,4 @@
-/*v1.1 2025-10-20T19:40:13.683Z*/
+/*v1.1 2025-10-21T16:40:42.415Z*/
 
 /*=============================================
 =            IMPORTS & VARIABLES              =
@@ -172,6 +172,7 @@ p {
   color: var(--text-black, #000);
   border-radius: .5rem;
   margin-top: .5rem;
+  animation: fadeIn 1.5s ease-out forwards;
 }
 
 .mission-content {
@@ -615,6 +616,48 @@ p {
   opacity: 0.9;
 }
 
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.pricing-table th,
+.pricing-table td {
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-family: var(--font-main);
+}
+
+.pricing-table td:first-child {
+  font-weight: 600;
+  color: var(--red-2)
+}
+
+.pricing-table thead th:nth-child(3),
+.pricing-table tr td:nth-child(3) {
+  text-align: center;
+}
+
+.pricing-table thead {
+  background: linear-gradient(45deg, var(--red-1), var(--red-2));
+}
+
+.pricing-table th {
+  color: white;
+}
+
+.pricing-table tbody tr:nth-child(even) {
+  background: rgba(255,255,255,0.05);
+}
+
+.see-examples-text a {
+  color: var(--red-2);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 /* Optional Sequential Fade-in */
 .service-card {
   opacity: 0;
@@ -786,6 +829,74 @@ p {
 .contact-button:hover {
   transform: scale(1.05);
   filter: brightness(1.2);
+}
+
+/* Why Choose Us subsection (inside Work With Us) */
+#contact .why-choose-us {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+#contact .why-choose-us .subsection-title {
+  font-size: 1.6rem;
+  margin: 5rem 0 0;
+  font-family: var(--font-main);
+  font-weight: 500;
+}
+
+#contact .why-choose-us .subsection-title::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.25);
+  max-width: 1000px;
+  width: 80%;
+}
+
+#contact .strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#contact .strength-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+#contact .strength-card .number {
+  font-size: 1.3rem;
+  font-family: var(--font-main);
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  color: var(--red-2)
+}
+
+#contact .strength-card h4 {
+  font-family: var(--font-main);
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+  color: var(--text-black);
+}
+
+#contact .strength-card p {
+  font-family: var(--font-main);
+  color: var(--text-black);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #contact .why-choose-us {
+    margin-top: 2rem;
+  }
+  #contact .strength-card {
+    padding: 1.2rem;
+  }
 }
 
 /* Partnerships */
@@ -1028,6 +1139,11 @@ h3#modal-title::after {
   animation: glow 8s ease-in-out infinite alternate;
   filter: brightness(130%);
 }
+
+a:-webkit-any-link {
+  color: var(--red-2)
+}
+
 
 
 /* Keyframes */

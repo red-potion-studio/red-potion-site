@@ -1,7 +1,11 @@
+// ----------------------
+// Portfolio Modal
+// ----------------------
 const portfolioItems = document.querySelectorAll('.portfolio-item');
 const modal = document.getElementById('portfolio-modal');
 const modalContent = modal.querySelector('.modal-content');
 const modalTitle = document.getElementById('modal-title');
+const modalLink = document.getElementById('modal-link');
 const modalClient = document.getElementById('modal-client');
 const modalYear = document.getElementById('modal-year');
 const modalType = document.getElementById('modal-type');
@@ -14,36 +18,50 @@ const thumbnailsContainer = modal.querySelector('.gallery-thumbnails');
 
 function openModal(item) {
   modalTitle.textContent = item.dataset.title;
-  modalClient.textContent = item.dataset.client;
-  modalYear.textContent = item.dataset.year;
-  modalType.textContent = item.dataset.type;
-  modalNotes.innerHTML = item.dataset.notes;
-  modalChallenges.innerHTML = item.dataset.challenges;
+  
+  if (item.dataset.link && item.dataset.linkType) {
+    let url = item.dataset.link.trim();
+    if (!url.startsWith('http')) url = 'https://' + url;
+    modalLink.innerHTML = `<a href="${url}" target="_blank" rel="noopener noreferrer">${item.dataset.linkType}</a>`;
+  } else {
+    modalLink.textContent = 'Not Available';
+  }
 
-  // Immagini della galleria
-  const images = item.dataset.images.split(',');
-  mainImage.src = images[0].trim();
+  modalClient.textContent = item.dataset.client || '';
+  modalYear.textContent = item.dataset.year || '';
+  modalType.textContent = item.dataset.type || '';
+  modalNotes.innerHTML = item.dataset.notes || '';
+  modalChallenges.innerHTML = item.dataset.challenges || '';
 
-  thumbnailsContainer.innerHTML = '';
-  images.forEach((src, index) => {
-    const thumb = document.createElement('img');
-    thumb.src = src.trim();
-    if (index === 0) thumb.classList.add('active');
-    thumb.addEventListener('click', () => {
-      mainImage.src = src.trim();
-      thumbnailsContainer.querySelectorAll('img').forEach(img => img.classList.remove('active'));
-      thumb.classList.add('active');
+  // Galleria immagini
+  if (item.dataset.images) {
+    const images = item.dataset.images.split(',');
+    mainImage.src = images[0].trim();
+
+    thumbnailsContainer.innerHTML = '';
+    images.forEach((src, index) => {
+      const thumb = document.createElement('img');
+      thumb.src = src.trim();
+      if (index === 0) thumb.classList.add('active');
+      thumb.addEventListener('click', () => {
+        mainImage.src = src.trim();
+        thumbnailsContainer.querySelectorAll('img').forEach(img => img.classList.remove('active'));
+        thumb.classList.add('active');
+      });
+      thumbnailsContainer.appendChild(thumb);
     });
-    thumbnailsContainer.appendChild(thumb);
-  });
+  } else {
+    mainImage.src = '';
+    thumbnailsContainer.innerHTML = '';
+  }
 
   modal.classList.add('show');
-  document.body.style.overflow = 'hidden'; // blocca scroll body
+  document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
   modal.classList.remove('show');
-  document.body.style.overflow = ''; // ripristina scroll body
+  document.body.style.overflow = '';
 }
 
 portfolioItems.forEach(item => {
@@ -51,6 +69,29 @@ portfolioItems.forEach(item => {
 });
 
 modalClose.addEventListener('click', closeModal);
-modal.addEventListener('click', (e) => {
+modal.addEventListener('click', e => {
   if (e.target === modal) closeModal();
+});
+
+const examplesModal = document.getElementById("examples-modal");
+const openExamplesBtn = document.getElementById("open-examples");
+const closeExamplesBtn = examplesModal.querySelector(".modal-close");
+
+openExamplesBtn.addEventListener("click", function(e) {
+  e.preventDefault();
+  examplesModal.classList.add("show");
+  document.body.style.overflow = 'hidden';
+});
+
+closeExamplesBtn.addEventListener("click", function() {
+  examplesModal.classList.remove("show");
+  document.body.style.overflow = '';
+});
+
+// Chiudi cliccando fuori
+examplesModal.addEventListener("click", function(e) {
+  if(e.target === examplesModal) {
+    examplesModal.classList.remove("show");
+    document.body.style.overflow = '';
+  }
 });
