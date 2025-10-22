@@ -1,4 +1,4 @@
-<!-- v1.0 2025-10-21T16:34:02.922Z -->
+<!-- v1.0 2025-10-22T19:36:21.816Z -->
 <!DOCTYPE html>
 <html lang="en" data-env="github" class="preload">
 
@@ -48,7 +48,7 @@
       <div>
         <img src="assets/icons/logo/logotype.svg" alt="Red Potion Studio" class="hero-logo" />
         <h2 class="hero-subtitle-2">Creative services for the tabletop RPG industry</h2>
-        <h3 class="hero-subtitle">Graphic Design • Narrative Design • VTT Modules • Translation</h2>
+        <h3 class="hero-subtitle">Graphic Design <span style="font-weight: 600; color: var(--red-2)">•</span> Narrative Design <span style="font-weight: 600; color: var(--red-2)">•</span> VTT Modules <span style="font-weight: 600; color: var(--red-2)">•</span> Translation</h2>
       </div>
     </div>
   </section>
@@ -103,43 +103,321 @@
           reflect your game’s identity, helping you engage your audience and showcase your content effectively.</p>
       </div>
     </div>
+    <!-- Pulsante per aprire la modal -->
+    <button style="margin-top: 3rem;" class="services-button" id="open-services">Available Services</button>
   </section>
 
-  <!-- 4 • Contacts -->
-<section id="contact" class="contact-section">
-  <h2 class="section-title gradient-text">Work With Us</h2>
-  <p class="contact-intro">
-    Have a project, a game, or an idea you want to bring to life?
-    <br>Let's create something extraordinary together.
-  </p>
-
-  <!-- Pulsante per aprire la modal -->
-  <button class="contact-button" id="open-contact-modal">Contact Us</button>
-
-  <!-- Why Choose Us subsection -->
-  <div class="why-choose-us">
-    <h3 class="subsection-title gradient-text">Why Choose Us</h3>
-    <div class="strengths-grid">
-      <div class="strength-card">
-        <div class="number">1</div>
-        <h4>“Can Do” Attitude</h4>
-        <p>We never start from “no.” Every project we’ve taken on began with a challenge outside our comfort zone — from mastering Print-on-Demand to building Roll20 Compendiums. We research, learn, and deliver.</p>
+  <!-- Full Services Table -->
+  <div id="services-modal" class="modal">
+    <div class="gradient-frame">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+  
+        <section id="services-table">
+          <h3 id="modal-title">Services Table</h3>
+  
+          <div class="modal-description">
+  
+            <!-- Main Services -->
+            <h4>Graphic Design</h4>
+            <table class="services-table">
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Basic Layout</td>
+                  <td>Clean, text-focused page composition with minimal decorative elements.</td>
+                </tr>
+                <tr>
+                  <td>Standard Layout</td>
+                  <td>Balanced mix of text, images, and tables for professional presentation.</td>
+                </tr>
+                <tr>
+                  <td>Complex Layout</td>
+                  <td>Visually rich spreads with integrated art, backgrounds, and advanced styling.</td>
+                </tr>
+                <tr>
+                  <td>Illustration Integration</td>
+                  <td>Placement, scaling, and color adjustment of provided artwork to fit the layout.</td>
+                </tr>
+                <tr>
+                  <td>Localization Layout</td>
+                  <td>Adapting existing designs for translated editions or multilingual releases.</td>
+                </tr>
+              </tbody>
+            </table>
+  
+            <h5>Add-Ons</h5>
+            <table class="services-table">
+              <thead>
+                <tr>
+                  <th>Add-On</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cover Design</td>
+                  <td>Front/back cover composition using client assets or templates.</td>
+                </tr>
+                <tr>
+                  <td>Layout Template / Style Guide</td>
+                  <td>Reusable InDesign or Affinity template with grids, paragraph, and character styles.</td>
+                </tr>
+                <tr>
+                  <td>Print-Ready Setup</td>
+                  <td>Pre-press optimization, bleed configuration, and export for print.</td>
+                </tr>
+                <tr>
+                  <td>Interactive PDF / Digital Edition</td>
+                  <td>Hyperlinks, bookmarks, and internal navigation for digital versions.</td>
+                </tr>
+                <tr>
+                  <td>Extra Revision Round</td>
+                  <td>Additional correction pass after delivery.</td>
+                </tr>
+                <tr>
+                  <td>Urgent Delivery</td>
+                  <td>Accelerated turnaround within tight deadlines.</td>
+                </tr>
+              </tbody>
+            </table>
+  
+            <!-- VTT CONVERSION -->
+            <h4>VTT Conversion</h4>
+            <table class="services-table">
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>VTT Module Layout</td>
+                  <td>Conversion of print layouts into modules for Roll20, Foundry, or similar platforms.</td>
+                </tr>
+                <tr>
+                  <td>Map Preparation</td>
+                  <td>Grid alignment, fog of war setup, and token placement for virtual play.</td>
+                </tr>
+                <tr>
+                  <td>Interactive Handouts</td>
+                  <td>Clickable or dynamic reference materials optimized for online sessions.</td>
+                </tr>
+              </tbody>
+            </table>
+  
+            <h5>Add-Ons</h5>
+            <table class="services-table">
+              <thead>
+                <tr>
+                  <th>Add-On</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>VTT Optimization</td>
+                  <td>File compression, dynamic lighting setup, and asset naming standardization.</td>
+                </tr>
+                <tr>
+                  <td>Custom Tokens & Frames</td>
+                  <td>Design of character and monster tokens matching the project’s visual style.</td>
+                </tr>
+              </tbody>
+            </table>
+  
+            <!-- CONTENT DESIGN -->
+            <h4>Content Design</h4>
+            <table class="services-table">
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lore and Worldbuilding Support</td>
+                  <td>Structural editing and refinement of setting material and narrative tone.</td>
+                </tr>
+                <tr>
+                  <td>Adventure or Scenario Formatting</td>
+                  <td>Layout and presentation of ready-to-play adventures and quest modules.</td>
+                </tr>
+                <tr>
+                  <td>Ruleset Development Support</td>
+                  <td>Assistance in visualizing and formatting mechanical systems for clarity.</td>
+                </tr>
+                <tr>
+                  <td>Game Mechanics Editing</td>
+                  <td>Review and editing of rule text for precision, terminology, and consistency.</td>
+                </tr>
+              </tbody>
+            </table>
+  
+            <!-- MARKETING ASSETS -->
+            <h4>Marketing Assets</h4>
+            <table class="services-table">
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Kickstarter / Crowdfunding Page Layout</td>
+                  <td>Visual structure and typography setup for campaign pages.</td>
+                </tr>
+                <tr>
+                  <td>Marketing Graphics Pack</td>
+                  <td>Creation of banners, mockups, and social media visuals for product launches.</td>
+                </tr>
+                <tr>
+                  <td>Product Mockups</td>
+                  <td>High-quality visual previews of books, cards, or digital products.</td>
+                </tr>
+              </tbody>
+            </table>
+  
+            <h5>Add-Ons</h5>
+            <table class="services-table">
+              <thead>
+                <tr>
+                  <th>Add-On</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Logo or Emblem Design</td>
+                  <td>Creation of project-specific wordmark or emblem for consistent branding.</td>
+                </tr>
+                <tr>
+                  <td>Press Kit Assembly</td>
+                  <td>Curated bundle of images, blurbs, and formatted content for media distribution.</td>
+                </tr>
+                <tr>
+                  <td>Digital Accessibility Optimization</td>
+                  <td>Alt-text, tagging, and contrast improvements for inclusive digital releases.</td>
+                </tr>
+              </tbody>
+            </table>
+  
+          </div>
+        </section>
+        <!-- Service Packs Section -->
+        <section id="service-packs">
+          <h3 id="modal-title" style="text-align: left;">Services Packs</h3>
+  
+          <div class="packs-grid">
+  
+            <!-- Pack 1 -->
+            <div class="service-pack">
+              <h4>Pack 1<br> 5E Update & Revamp</h4>
+              <p class="pack-description">
+                Upgrade your existing 2014-edition DMsGuild title to the 2024 ruleset with a modern look and polished
+                content.
+                Perfect for creators refreshing their bestsellers.
+              </p>
+              <ol class="pack-includes">
+                <li>Graphic Layout Modernization</li>
+                <li>Rules & Wording Update for 2024 compatibility</li>
+                <li>Interactive Digital Edition (hyperlinked PDF)</li>
+                <li>Base Promotional Materials (banners + mockups)</li>
+              </ol>
+            </div>
+  
+            <!-- Pack 2 -->
+            <div class="service-pack">
+              <h4>Pack 2<br> Complete DMsGuild Publishing</h4>
+              <p class="pack-description">
+                A full pipeline for creators publishing a new title on DMsGuild. From page design to marketing visuals,
+                everything prepared and ready for upload.
+              </p>
+              <ul class="pack-includes">
+                <li>Graphic Layout (standard or complex, depending on project)</li>
+                <li>Interactive Digital Edition (hyperlinked PDF)</li>
+                <li>Print-on-Demand (POD) Version Setup</li>
+                <li>Base Promotional Materials (banners + mockups)</li>
+              </ul>
+            </div>
+  
+            <!-- Pack 3 -->
+            <div class="service-pack">
+              <h4>Pack 3<br> Kickstarter Launch Kit</h4>
+              <p class="pack-description">
+                Designed for independent publishers planning a crowdfunding campaign. Focuses on presentation,
+                consistency,
+                and digital deliverables that attract backers.
+              </p>
+              <ul class="pack-includes">
+                <li>Graphic Layout for core content or sample preview</li>
+                <li>Crowdfunding Page Layout (Kickstarter or Backerkit)</li>
+                <li>Digital Edition (interactive or early access PDF)</li>
+                <li>Marketing Graphics Pack (banners, stretch goals, social media assets)</li>
+              </ul>
+            </div>
+  
+          </div>
+        </section>
       </div>
-
-      <div class="strength-card">
-        <div class="number">2</div>
-        <h4>Close, Personal Collaboration</h4>
-        <p>As a small studio, clients work directly with the person handling their project. No middlemen, no barriers — just a friendly, professional exchange built on trust and shared vision.</p>
-      </div>
-
-      <div class="strength-card">
-        <div class="number">3</div>
-        <h4>Full Creative Ownership</h4>
-        <p>We don’t just execute — we create. From layout design to narrative development, every project is treated as a cohesive creative ecosystem where visuals and storytelling amplify each other.</p>
-      </div>
+  
     </div>
   </div>
-</section>
+
+  <!-- 4 • Contacts -->
+  <section id="contact" class="contact-section">
+    <h2 class="section-title gradient-text">Work With Us</h2>
+    <p class="contact-intro">
+      Have a project, a game, or an idea you want to bring to life?
+      <br>Let's create something extraordinary together.
+    </p>
+
+    <!-- Pulsante per aprire la modal -->
+    <button class="contact-button" id="open-contact-modal">Contact Us</button>
+
+    <!-- Why Choose Us subsection -->
+    <div class="why-choose-us">
+      <h3 class="subsection-title gradient-text">Why Choose Us</h3>
+      <ul class="strengths-list">
+        <li class="strength-card">
+          <h4>“Can Do” Attitude</h4>
+          <p>We never start from “no.” Every project we’ve taken on began with a challenge outside our comfort zone — from
+            mastering Print-on-Demand to building Roll20 Compendiums. We research, learn, and deliver.</p>
+        </li>
+    
+        <li class="strength-card">
+          <h4>Close, Personal Collaboration</h4>
+          <p>As a small studio, clients work directly with the person handling their project. No middlemen, no barriers —
+            just a friendly, professional exchange built on trust and shared vision.</p>
+        </li>
+    
+        <li class="strength-card">
+          <h4>Iterative Creative Process</h4>
+          <p>Our workflow includes regular feedback checkpoints, prototypes, and test renders — letting clients shape the
+            final result with confidence.</p>
+        </li>
+    
+        <li class="strength-card">
+          <h4>Built by Players, for Players</h4>
+          <p>We are lifelong tabletop enthusiasts and active game masters. Our firsthand experience with roleplaying games shapes our design philosophy, ensuring every product feels authentic, playable, and inspiring at the table.</p>
+        </li>
+    
+        <li class="strength-card">
+          <h4>Cross-Media Expertise</h4>
+          <p>We move seamlessly between print, digital, and virtual formats — books, VTTs, websites, or Kickstarter
+            campaigns — ensuring consistency of style and tone across every medium.</p>
+        </li>
+      </ul>
+    </div>
+    </section>
 
 
   <!-- Contact Modal -->
@@ -197,47 +475,73 @@
     </p>
     <div class="portfolio-grid">
       <div class="portfolio-item-wrapper">
-        <div class="portfolio-item" data-title="Burn the Witch" data-link="" data-link-type="Not Available" data-client="Personal" data-year="2025"
-          data-type="Narrative, Game, and Graphic Design" data-notes="
-<p><em>Burn the Witch</em> was a personal project — a complete adventure written for <strong>Dungeons & Dragons 5E</strong>.</p>
-<p>For <em>Burn the Witch</em>, Red Potion Studio handled every aspect of production: from the narrative and adventure design to the mechanical development and overall game structure.</p>
-<p>The final product was fully laid out in the visual style of D&D’s 2024 edition, enriched with custom decorative elements and bespoke graphic details.</p>
-" data-challenges="<p>The main challenge of this project lay in narrative design. As an investigative adventure featuring numerous NPCs—each holding vital clues for the players to uncover the mystery—it required careful structuring to ensure that every character felt unique, memorable, and easy for the DM to roleplay.</p> <p>Balancing clarity, personality, and information flow was essential to maintain player engagement without overwhelming the Dungeon Master.</p>" data-images="assets/portfolio/btw/p1.jpg, assets/portfolio/btw/p2.jpg, assets/portfolio/btw/p3.jpg, assets/portfolio/btw/p4.jpg, assets/portfolio/btw/p5.jpg">
+        <div class="portfolio-item" 
+          data-title="Burn the Witch" 
+          data-link="" 
+          data-link-type="Not Available"
+          data-client="Personal" 
+          data-year="2025" 
+          data-type="Narrative, Game, and Graphic Design" 
+          data-notes="<p><em>Burn the Witch</em> was a personal project — a complete adventure written for <strong>Dungeons & Dragons 5E</strong>.</p>
+          <p>For <em>Burn the Witch</em>, Red Potion Studio handled every aspect of production: from the narrative and adventure design to the mechanical development and overall game structure.</p>
+          <p>The final product was fully laid out in the visual style of D&D’s 2024 edition, enriched with custom decorative elements and bespoke graphic details.</p>" 
+          data-challenges="<p>The main challenge of this project lay in narrative design. As an investigative adventure featuring numerous NPCs—each holding vital clues for the players to uncover the mystery—it required careful structuring to ensure that every character felt unique, memorable, and easy for the DM to roleplay.</p> <p>Balancing clarity, personality, and information flow was essential to maintain player engagement without overwhelming the Dungeon Master.</p>"
+          data-images="assets/portfolio/btw/p1.jpg, assets/portfolio/btw/p2.jpg, assets/portfolio/btw/p3.jpg, assets/portfolio/btw/p4.jpg, assets/portfolio/btw/p5.jpg">
           <img src="assets/portfolio/btw.png" alt="Burn the Witch cover">
         </div>
       </div>
 
       <div class="portfolio-item-wrapper">
-        <div class="portfolio-item" data-title="Gristlecracker's Hags & Grimoire" data-link="www.dmsguild.com/product/517804" data-link-type="Dungeon Masters Guild"
-          data-client="Laws of Chaos (D. Chivers, M. Bertini)" data-year="2025" data-type="Graphic Design, Layout"
+        <div class="portfolio-item" 
+          data-title="Gristlecracker's Hags & Grimoire"
+          data-link="www.dmsguild.com/product/517804" 
+          data-link-type="Dungeon Masters Guild"
+          data-client="Laws of Chaos (D. Chivers, M. Bertini)" 
+          data-year="2025" 
+          data-type="Graphic Design, Layout"
           data-notes="<p><em>For Gristlecracker's Hags & Grimoire</em>, we were responsible for the <strong>graphic design</strong> of the manual. Beyond the page layout and typographic structure, we designed custom visual elements such as decorations, frames, and footers to ensure a cohesive aesthetic.</p>
-
-<p>We also took care of the <strong>technical preparation for print</strong>, converting all artworks into the correct formats and color profiles, cutting out illustrations, and refining their backgrounds and masks. In addition, we assisted with artistic direction, helping select the final decorations and color palette to achieve the desired tone and atmosphere.</p> 
-
-<p>Once the print version was complete, we also created the <strong>digital PDF edition</strong>, which included an interactive table of contents and hyperlinked navigation for seamless reading." data-challenges="<p>This was our first project prepared for print-on-demand (POD) on the DMsGuild, which required following a very strict set of technical specifications to ensure compatibility and print quality.</p> 
-  <p>On top of that, we worked under a shortened deadline to meet the author’s request for an early release, just before the launch of the Monster Manual 2025. Balancing precision and speed was key to delivering a polished, fully compliant print-ready layout on time.</p>" data-images="assets/portfolio/ghg/p1.jpg, assets/portfolio/ghg/p2.jpg, assets/portfolio/ghg/p3.jpg, assets/portfolio/ghg/p4.jpg, assets/portfolio/ghg/p5.jpg">
+          <p>We also took care of the <strong>technical preparation for print</strong>, converting all artworks into the correct formats and color profiles, cutting out illustrations, and refining their backgrounds and masks. In addition, we assisted with artistic direction, helping select the final decorations and color palette to achieve the desired tone and atmosphere.</p> 
+          <p>Once the print version was complete, we also created the <strong>digital PDF edition</strong>, which included an interactive table of contents and hyperlinked navigation for seamless reading."
+          data-challenges="<p>This was our first project prepared for print-on-demand (POD) on the DMsGuild, which required following a very strict set of technical specifications to ensure compatibility and print quality.</p> 
+          <p>On top of that, we worked under a shortened deadline to meet the author’s request for an early release, just before the launch of the Monster Manual 2025. Balancing precision and speed was key to delivering a polished, fully compliant print-ready layout on time.</p>"
+          data-images="assets/portfolio/ghg/p1.jpg, assets/portfolio/ghg/p2.jpg, assets/portfolio/ghg/p3.jpg, assets/portfolio/ghg/p4.jpg, assets/portfolio/ghg/p5.jpg">
           <img src="assets/portfolio/ghg.png" alt="Gristlecracker.s Hags & Grimoire cover">
         </div>
       </div>
 
       <div class="portfolio-item-wrapper">
-        <div class="portfolio-item" data-title="The Complete Hag Roll20" data-link="https://www.dmsguild.com/en/product/506218" data-link-type="Dungeon Masters Guild" 
-          data-client="Laws of Chaos (D. Chivers, M. Bertini)" data-year="2025"
-          data-type="VTT Module (Roll20 Compendium)" data-notes="<p>For <em>The Complete Hag</em>, we handled the full conversion of the manual into a Roll20 Compendium module.
-Beyond adapting the textual content, we implemented <strong>complete automations</strong> for magic items, spells, and monsters, ensuring a seamless in-platform experience.</p>
-<p>We also designed a <strong>custom graphic layout</strong> for the compendium, integrating visual elements and thematic decorations to preserve the product’s aesthetic identity within Roll20’s digital environment.</p>" data-challenges="<p>This project marked our first full conversion of a manual into a Roll20 Compendium, which required learning the complete data and content setup for the platform.
-We worked extensively with JSON files, HTML, and CSS to structure the internal data that powers the Compendium’s entries and functionality.</p>
-<p>We also had to navigate the entire publication pipeline, including the creation of the final user-facing Compendium module, ensuring it worked seamlessly within Roll20’s ecosystem.</p>" data-images="assets/portfolio/tch/p1.png, assets/portfolio/tch/p2.png, assets/portfolio/tch/p3.png, assets/portfolio/tch/p4.png, assets/portfolio/tch/p5.png">
+        <div class="portfolio-item" 
+          data-title="The Complete Hag Roll20"
+          data-link="https://www.dmsguild.com/en/product/506218" 
+          data-link-type="Dungeon Masters Guild"
+          data-client="Laws of Chaos (D. Chivers, M. Bertini)" 
+          data-year="2025"
+          data-type="VTT Module (Roll20 Compendium)"
+          data-notes="<p>For <em>The Complete Hag</em>, we handled the full conversion of the manual into a Roll20 Compendium module.
+          Beyond adapting the textual content, we implemented <strong>complete automations</strong> for magic items, spells, and monsters, ensuring a seamless in-platform experience.</p>
+          <p>We also designed a <strong>custom graphic layout</strong> for the compendium, integrating visual elements and thematic decorations to preserve the product’s aesthetic identity within Roll20’s digital environment.</p>"
+          data-challenges="<p>This project marked our first full conversion of a manual into a Roll20 Compendium, which required learning the complete data and content setup for the platform.
+          We worked extensively with JSON files, HTML, and CSS to structure the internal data that powers the Compendium’s entries and functionality.</p>
+          <p>We also had to navigate the entire publication pipeline, including the creation of the final user-facing Compendium module, ensuring it worked seamlessly within Roll20’s ecosystem.</p>"
+          data-images="assets/portfolio/tch/p1.png, assets/portfolio/tch/p2.png, assets/portfolio/tch/p3.png, assets/portfolio/tch/p4.png, assets/portfolio/tch/p5.png">
           <img src="assets/portfolio/tch.png" alt="The Complete Hag cover">
         </div>
       </div>
 
       <div class="portfolio-item-wrapper">
-        <div class="portfolio-item" data-title="Big Bundle of Everything Roll20" data-link="https://www.dmsguild.com/en/product/486912" data-link-type="Dungeon Masters Guild" data-client="M. Bertini, with M. Fossati, D. Chivers"
-          data-year="2025" data-type="VTT Module (Roll20 Compendium)" data-notes="<p>For the <em>Big Bundle of Everything</em>, we handled the conversion of most manuals written by Marco Bertini, including works from both the Sign of the Dragon and Laws of Chaos groups.</p>
-<p>This extensive collection covers adventures, supplements, magic items, additional rule systems, bestiaries, and a wide range of other well-regarded products for Dungeons & Dragons 5E.</p>
-<p>Depending on the nature of each manual, some were converted as Addon Modules, while others became Compendium Modules within the Roll20 platform.</p>" data-challenges="<p>The primary challenge of this project lay in its scale and diversity — the products differed greatly in format, purpose, and structure.</p>
-<p>To manage this effectively, we developed a standardized conversion workflow that allowed for faster, more consistent production across multiple modules, ensuring each release maintained both technical reliability and visual cohesion despite the variety of content.</p>" data-images="assets/portfolio/bboe/p1.jpg, assets/portfolio/bboe/p2.png, assets/portfolio/bboe/p3.png, assets/portfolio/bboe/p4.png, assets/portfolio/bboe/p5.jpg">
+        <div class="portfolio-item" 
+          data-title="Big Bundle of Everything Roll20"
+          data-link="https://www.dmsguild.com/en/product/486912" 
+          data-link-type="Dungeon Masters Guild"
+          data-client="M. Bertini, with M. Fossati, D. Chivers" 
+          data-year="2025"
+          data-type="VTT Module (Roll20 Compendium)"
+          data-notes="<p>For the <em>Big Bundle of Everything</em>, we handled the conversion of most manuals written by Marco Bertini, including works from both the Sign of the Dragon and Laws of Chaos groups.</p>
+          <p>This extensive collection covers adventures, supplements, magic items, additional rule systems, bestiaries, and a wide range of other well-regarded products for Dungeons & Dragons 5E.</p>
+          <p>Depending on the nature of each manual, some were converted as Addon Modules, while others became Compendium Modules within the Roll20 platform.</p>"
+          data-challenges="<p>The primary challenge of this project lay in its scale and diversity — the products differed greatly in format, purpose, and structure.</p>
+          <p>To manage this effectively, we developed a standardized conversion workflow that allowed for faster, more consistent production across multiple modules, ensuring each release maintained both technical reliability and visual cohesion despite the variety of content.</p>"
+          data-images="assets/portfolio/bboe/p1.jpg, assets/portfolio/bboe/p2.png, assets/portfolio/bboe/p3.png, assets/portfolio/bboe/p4.png, assets/portfolio/bboe/p5.jpg">
           <img src="assets/portfolio/bboe.png" alt="Big Bundle of Everything cover">
         </div>
       </div>
@@ -253,17 +557,19 @@ We worked extensively with JSON files, HTML, and CSS to structure the internal d
         <span class="modal-close">&times;</span>
 
         <div class="modal-details">
-        <div class="modal-notes">
-          <h3 id="modal-title" class="gradient-text"></h3>
-          <p><strong>Client <span class="dot-divider">•</span></strong> <span id="modal-client"></span></p>
-          <p><strong>Link <span class="dot-divider">•</span></strong> <span id="modal-link"></span></p>
-          <p><strong>Year <span class="dot-divider">•</span></strong> <span id="modal-year"></span></p>
-          <p><strong>Type <span class="dot-divider">•</span></strong> <span id="modal-type"></span></p>
-        </div>
-        <div class="modal-description">
-          <p><strong><span class="modal-description-title">Description</span></strong> <span id="modal-notes"></span></p>
-          <p><strong><span class="modal-description-title">Challenges</span></strong> <span id="modal-challenges"></span></p>
-        </div>
+          <div class="modal-notes">
+            <h3 id="modal-title" class="gradient-text"></h3>
+            <p><strong>Client <span class="dot-divider">•</span></strong> <span id="modal-client"></span></p>
+            <p><strong>Link <span class="dot-divider">•</span></strong> <span id="modal-link"></span></p>
+            <p><strong>Year <span class="dot-divider">•</span></strong> <span id="modal-year"></span></p>
+            <p><strong>Type <span class="dot-divider">•</span></strong> <span id="modal-type"></span></p>
+          </div>
+          <div class="modal-description">
+            <p><strong><span class="modal-description-title">Description</span></strong> <span id="modal-notes"></span>
+            </p>
+            <p><strong><span class="modal-description-title">Challenges</span></strong> <span
+                id="modal-challenges"></span></p>
+          </div>
         </div>
 
         <!-- Gallery -->
@@ -375,7 +681,8 @@ We worked extensively with JSON files, HTML, and CSS to structure the internal d
       <div class="faq-item">
         <button class="faq-question">How much does a project cost?</button>
         <div class="faq-answer">
-          <p>Pricing depends on scope and complexity. Contact us with your project details for a personalized quote. <span class="see-examples-text"><a href="#" id="open-examples">See examples.</a></span></p>
+          <p>Pricing depends on scope and complexity. Contact us with your project details for a personalized quote.
+            <span class="see-examples-text"><a href="#" id="open-examples">See examples.</a></span></p>
         </div>
       </div>
 
@@ -437,89 +744,105 @@ We worked extensively with JSON files, HTML, and CSS to structure the internal d
   </section>
 
   <!-- Price Examples Modal -->
-<div id="examples-modal" class="modal">
-  <div class="gradient-frame">
-    <div class="modal-content">
-      <span class="modal-close">&times;</span>
-
-      <h3 id="modal-title">Pricing Examples</h3>
-
-      <div class="modal-description">
-        <table class="pricing-table">
-          <thead>
-            <tr>
-              <th>Service</th>
-              <th>Description</th>
-              <th>Pricing</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Basic Layout</td>
-              <td>Simple text layout (mostly text, minimal tables or images).</td>
-              <td>€1.50 – €2.50 / page</td>
-              <td>Ideal for adventures, zines, or text-heavy modules.</td>
-            </tr>
-            <tr>
-              <td>Standard Layout</td>
-              <td>Text + moderate use of images, tables, or sidebars.</td>
-              <td>€2.50 – €4.00 / page</td>
-              <td>Most common for RPG rulebooks and supplements.</td>
-            </tr>
-            <tr>
-              <td>Complex Layout</td>
-              <td>Decorative backgrounds, columns, borders, art integration, or graphic-heavy spreads.</td>
-              <td>€4.00 – €6.00 / page</td>
-              <td>Recommended for high-visual manuals or premium editions.</td>
-            </tr>
-            <tr>
-              <td>Cover Design (Add-On)</td>
-              <td>Design of front/back cover using client assets or templates.</td>
-              <td>from €40</td>
-              <td>Includes basic typography and layout; illustration not included.</td>
-            </tr>
-            <tr>
-              <td>Layout Template / Style Guide (Add-On)</td>
-              <td>Creation of a reusable Adobe InDesign or Affinity Publisher template with styles and grid.</td>
-              <td>€80 – €150</td>
-              <td>Useful for publishers planning multiple titles.</td>
-            </tr>
-            <tr>
-              <td>Print-Ready Setup (Add-On)</td>
-              <td>Pre-press optimization, bleed setup, export for print.</td>
-              <td>€25 – €50</td>
-              <td>Includes print proof (PDF).</td>
-            </tr>
-            <tr>
-              <td>Interactive PDF / Digital Edition (Add-On)</td>
-              <td>Hyperlinks, bookmarks, table of contents, internal navigation.</td>
-              <td>€30 – €60</td>
-              <td>Based on document length.</td>
-            </tr>
-            <tr>
-              <td>Extra Revision Round</td>
-              <td>Additional layout corrections after delivery.</td>
-              <td>€15 – €25 / round</td>
-              <td>One revision round included in base price.</td>
-            </tr>
-            <tr>
-              <td>Urgent Delivery (Add-On)</td>
-              <td>Delivery in under 3 working days.</td>
-              <td>+25 % of total</td>
-              <td>Subject to project scope.</td>
-            </tr>
-          </tbody>
-        </table>
+  <div id="examples-modal" class="modal">
+    <div class="gradient-frame">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+  
+        <h3 id="modal-title">Pricing Examples</h3>
+  
+        <div class="modal-description">
+  
+          <!-- Main Services -->
+          <h4>Main Services</h4>
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Description</th>
+                <th>Pricing</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Basic Layout</td>
+                <td>Simple text layout (mostly text, minimal tables or images).</td>
+                <td>€1.50 – €2.50 / page</td>
+                <td>Ideal for adventures, zines, or text-heavy modules.</td>
+              </tr>
+              <tr>
+                <td>Standard Layout</td>
+                <td>Text + moderate use of images, tables, or sidebars.</td>
+                <td>€2.50 – €4.00 / page</td>
+                <td>Most common for RPG rulebooks and supplements.</td>
+              </tr>
+              <tr>
+                <td>Complex Layout</td>
+                <td>Decorative backgrounds, columns, borders, art integration, or graphic-heavy spreads.</td>
+                <td>€4.00 – €6.00 / page</td>
+                <td>Recommended for high-visual manuals or premium editions.</td>
+              </tr>
+            </tbody>
+          </table>
+  
+          <!-- Add-Ons -->
+          <h4 style="margin-top: 2rem;">Add-Ons</h4>
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Description</th>
+                <th>Pricing</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cover Design</td>
+                <td>Design of front/back cover using client assets or templates.</td>
+                <td>from €40</td>
+                <td>Includes basic typography and layout; illustration not included.</td>
+              </tr>
+              <tr>
+                <td>Layout Template / Style Guide</td>
+                <td>Creation of a reusable Adobe InDesign or Affinity Publisher template with styles and grid.</td>
+                <td>€80 – €150</td>
+                <td>Useful for publishers planning multiple titles.</td>
+              </tr>
+              <tr>
+                <td>Print-Ready Setup</td>
+                <td>Pre-press optimization, bleed setup, export for print.</td>
+                <td>€25 – €50</td>
+                <td>Includes print proof (PDF).</td>
+              </tr>
+              <tr>
+                <td>Interactive PDF / Digital Edition</td>
+                <td>Hyperlinks, bookmarks, table of contents, internal navigation.</td>
+                <td>€30 – €60</td>
+                <td>Based on document length.</td>
+              </tr>
+              <tr>
+                <td>Extra Revision Round</td>
+                <td>Additional layout corrections after delivery.</td>
+                <td>€15 – €25 / round</td>
+                <td>One revision round included in base price.</td>
+              </tr>
+              <tr>
+                <td>Urgent Delivery</td>
+                <td>Delivery in under 3 working days.</td>
+                <td>+25 % of total</td>
+                <td>Subject to project scope.</td>
+              </tr>
+            </tbody>
+          </table>
+  
+        </div>
       </div>
-
     </div>
   </div>
-</div>
-
 
   <!-- Footer -->
-
   <footer class="site-footer">
     <div class="footer-content">
 
@@ -579,8 +902,5 @@ We worked extensively with JSON files, HTML, and CSS to structure the internal d
     });
   </script>
 
-
-
 </body>
-
 </html>

@@ -1,4 +1,4 @@
-/*v1.1 2025-10-21T16:40:42.415Z*/
+/*v1.1 2025-10-22T19:46:24.632Z*/
 
 /*=============================================
 =            IMPORTS & VARIABLES              =
@@ -616,46 +616,97 @@ p {
   opacity: 0.9;
 }
 
-.pricing-table {
+/* Modal Tables */
+#examples-modal h4,
+#services-modal h4 {
+  font-family: var(--font-main);
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 2rem 0 0;
+  color: var(--red-2);
+}
+
+#services-modal h5 {
+  font-family: var(--font-main);
+  margin: 1rem 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#services-modal h4,
+#services-modal h5 {
+  text-align: left;
+}
+
+.pricing-table,
+.services-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
 }
 
 .pricing-table th,
-.pricing-table td {
+.pricing-table td,
+.services-table th,
+.services-table td {
   border: 1px solid rgba(0,0,0,0.1);
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   text-align: left;
   font-family: var(--font-main);
+  font-size: .9rem;
 }
 
-.pricing-table td:first-child {
+.pricing-table td:first-child,
+.services-table td:first-child {
   font-weight: 600;
   color: var(--red-2)
 }
 
+.services-table td:first-child {
+  width: 30%;
+}
+
 .pricing-table thead th:nth-child(3),
-.pricing-table tr td:nth-child(3) {
+.pricing-table tr td:nth-child(3),
+.services-table thead th:nth-child(3),
+.services-table tr td:nth-child(3) {
   text-align: center;
 }
 
-.pricing-table thead {
+.pricing-table thead,
+.services-table thead {
   background: linear-gradient(45deg, var(--red-1), var(--red-2));
 }
 
-.pricing-table th {
+.pricing-table th,
+.services-table th {
   color: white;
 }
 
-.pricing-table tbody tr:nth-child(even) {
-  background: rgba(255,255,255,0.05);
+.pricing-table tbody tr:nth-child(even),
+.services-table tbody tr:nth-child(even) {
+  background: rgba(var(--background-light-1-rgb), .3);
+}
+
+.pricing-table tbody tr:nth-child(odd),
+.services-table tbody tr:nth-child(odd) {
+  background: rgba(var(--background-light-4-rgb), .5);
 }
 
 .see-examples-text a {
   color: var(--red-2);
   cursor: pointer;
   text-decoration: underline;
+}
+
+#examples-modal .modal-content,
+#services-modal .modal-content {
+    gap: 0;
+}
+
+#services-modal .modal-description,
+#services-table, #service-packs {
+  width: 100%;
 }
 
 /* Optional Sequential Fade-in */
@@ -681,6 +732,74 @@ p {
   animation-delay: 0.6s;
 }
 
+#service-packs {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+#service-packs .packs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.service-pack {
+  background: rgba(255, 255, 255, .6);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease;
+}
+
+.service-pack:hover {
+  transform: translateY(-4px);
+}
+
+.service-pack h4 {
+  font-family: var(--font-main);
+  font-size: 1.2rem;
+  color: var(--text-black);
+  margin-bottom: 0.6rem;
+}
+
+.pack-description {
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  color: var(--text-black);
+  opacity: 0.85;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.pack-includes {
+  list-style-type: none;
+  padding-left: .5em;
+  margin: 0;
+}
+
+.pack-includes li::before {
+  content: "◆";
+  color: var(--red-2);
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.pack-includes li {
+  font-family: var(--font-main);
+  color: var(--text-black);
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  font-weight: 350;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .service-pack {
+    padding: 1.2rem;
+  }
+}
 
 /* Contacts */
 
@@ -813,7 +932,8 @@ p {
   margin-top: 0.5rem;
 }
 
-.contact-button {
+.contact-button,
+.services-button {
   background: linear-gradient(90deg, var(--red-1), var(--red-2));
   color: #fff;
   border: none;
@@ -826,7 +946,8 @@ p {
   font-size: 1rem;
 }
 
-.contact-button:hover {
+.contact-button:hover,
+.services-button:hover {
   transform: scale(1.05);
   filter: brightness(1.2);
 }
@@ -835,44 +956,49 @@ p {
 #contact .why-choose-us {
   margin-top: 3rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #contact .why-choose-us .subsection-title {
   font-size: 1.6rem;
-  margin: 5rem 0 0;
+  margin: 2rem 0 0;
+  padding: 0 1.5rem;
   font-family: var(--font-main);
   font-weight: 500;
+  width: 100%;
+  text-align: left;
+  max-width: 800px;
 }
 
 #contact .why-choose-us .subsection-title::after {
-  content: "";
-  background: rgba(0, 0, 0, 0.25);
-  max-width: 1000px;
-  width: 80%;
+  width: 100%;
 }
 
-#contact .strengths-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
+#contact .strengths-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
 }
 
 #contact .strength-card {
   background: rgba(255, 255, 255, 0.03);
   border-radius: 1rem;
-  padding: 1.5rem;
-  transition: all 0.3s ease;
+  padding: 0 1.5rem;
+  transition: transform 0.3s ease;
   backdrop-filter: blur(6px);
+  text-align: left;
 }
 
-#contact .strength-card .number {
-  font-size: 1.3rem;
-  font-family: var(--font-main);
-  margin-bottom: 0.8rem;
-  font-weight: 500;
-  color: var(--red-2)
+#contact .strength-card:hover {
+  transform: translateX(5px);
 }
 
 #contact .strength-card h4 {
@@ -895,12 +1021,11 @@ p {
     margin-top: 2rem;
   }
   #contact .strength-card {
-    padding: 1.2rem;
+    padding: .2rem;
   }
 }
 
 /* Partnerships */
-
 .partnership-section {
   background: url('../assets/textures/diamonds-1.png') repeat,
     linear-gradient(to bottom, var(--background-light-1), var(--background-light-2));
@@ -1279,6 +1404,10 @@ a:-webkit-any-link {
     font-size: 0.9rem;
   }
 
+  #contact .strength-card h4 {
+    margin-top: .5rem;
+  }
+
   /* Portfolio Section */
   .portfolio-grid {
     grid-template-columns: 1fr;
@@ -1301,6 +1430,7 @@ a:-webkit-any-link {
     padding: 1.5rem 1rem;
     flex-direction: column;
     gap: 1.5rem;
+    flex-direction: row;
   }
 
   .modal-description-title {

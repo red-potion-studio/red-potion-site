@@ -73,6 +73,10 @@ modal.addEventListener('click', e => {
   if (e.target === modal) closeModal();
 });
 
+// ----------------------
+// Examples Modal
+// ----------------------
+
 const examplesModal = document.getElementById("examples-modal");
 const openExamplesBtn = document.getElementById("open-examples");
 const closeExamplesBtn = examplesModal.querySelector(".modal-close");
@@ -88,10 +92,34 @@ closeExamplesBtn.addEventListener("click", function() {
   document.body.style.overflow = '';
 });
 
-// Chiudi cliccando fuori
 examplesModal.addEventListener("click", function(e) {
   if(e.target === examplesModal) {
     examplesModal.classList.remove("show");
     document.body.style.overflow = '';
+  }
+});
+
+// ----------------------
+// Services Modal
+// ----------------------
+const servicesModal = document.getElementById("services-modal");
+const openServicesBtn = document.getElementById("open-services");
+const closeServicesBtn = servicesModal.querySelector(".modal-close");
+
+openServicesBtn.addEventListener("click", function(e) {
+  e.preventDefault();
+  servicesModal.classList.add("show");
+  document.body.style.overflow = "hidden";
+});
+
+closeServicesBtn.addEventListener("click", function() {
+  servicesModal.classList.remove("show");
+  document.body.style.overflow = "";
+});
+
+servicesModal.addEventListener("click", function(e) {
+  if (e.target === servicesModal) {
+    servicesModal.classList.remove("show");
+    document.body.style.overflow = "";
   }
 });
