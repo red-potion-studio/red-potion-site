@@ -1,4 +1,4 @@
-/*v1.1 2025-10-22T19:46:24.632Z*/
+/*v1.1 2025-10-22T19:47:17.681Z*/
 
 /*=============================================
 =            IMPORTS & VARIABLES              =
@@ -1210,6 +1210,7 @@ p {
 
 .gradient-text {
   background: linear-gradient(90deg, var(--red-1), var(--red-2));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glow 8s ease-in-out infinite alternate;
